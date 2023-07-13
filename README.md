@@ -21,7 +21,7 @@ json文件存储，格式参考NYT数据集格式，包括Id（文本编号）�
 ## 基线模型
 
 我们将提供一个DGCNN+Attention模型作为深度基线模型，该模型是基于CNN和简单的Attention的结构。模型中的CNN为DGCNN，融合了膨胀卷积与门卷积的用法，使得模型在轻、快的基础上达到最佳的效果。Attention采用了简单的Self Attention。整体而言，模型参考了类似seq2seq的概率图思路，先识别实体1，然后传入实体1来同时识别关系和实体2，可以很好地覆盖抽取任务中各个样本的特点。
-模型来自于https://github.com/tianyunzqs/RelationshipExtractionTasks/tree/master，请在运行代码前从原代码库下载词向量。
+模型来自于 https://github.com/tianyunzqs/RelationshipExtractionTasks/tree/master   请在运行代码前从原代码库下载词向量。
 
 ## 模型依赖
 
