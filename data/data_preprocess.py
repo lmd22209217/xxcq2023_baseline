@@ -1,4 +1,5 @@
 import json
+from sklearn.model_selection import train_test_split
 
 with open("train_1.json", 'r', encoding='utf-8') as f:
     data1 = f.readlines()
@@ -27,6 +28,11 @@ for d in data2:
         "spo_list": []
     })
 
-json.dump(new_data1, open('train_triples.json', 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
+y = range(len(new_data1))  # 划分验证集，默认100条
+x_train_1, x_train_2, y_train_1, y_train_2 = train_test_split(new_data1, y, test_size=0.0693)
+
+
+json.dump(x_train_1, open('train_triples.json', 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
+json.dump(x_train_2, open('dev_triples.json', 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
 json.dump(new_data2, open('test_triples.json', 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
 

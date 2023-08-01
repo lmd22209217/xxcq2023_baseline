@@ -32,3 +32,10 @@ keras==2.3.1
 h5py==2.8.0
 ```
 
+## 运行说明
+
+从原代码仓库下载词向量 vector 文件，放在 baseline 目录下。
+
+将数据集放至 data 文件夹下，运行 data_preprocess.py，将数据处理为模型能够处理的输入。
+
+完成数据的处理后，运行 dgcnn_attention 文件夹下的 train.py 文件训练模型。训练完成需要进行测试时，将代码中的 do_train 变量修改为 False。
