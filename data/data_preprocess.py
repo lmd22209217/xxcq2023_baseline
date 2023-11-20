@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 with open("train_1.json", 'r', encoding='utf-8') as f:
     data1 = f.readlines()
 
-with open("test_1.txt", 'r', encoding='utf-8') as f:
+with open("test_1.json", 'r', encoding='utf-8') as f:
     data2 = f.readlines()
 
 new_data1 = []
